@@ -302,12 +302,19 @@ nav.scrolled {
   justify-content: center;
   align-items: center;
   transform: translateY(-100%);
-  transition: transform 0.8s var(--ease-expo);
+  transition: all 0.8s var(--ease-expo);
   padding: 60px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  /* Prevention of background leakage */
 }
 
 .nav-overlay.open {
   transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-overlay-links {
@@ -384,13 +391,21 @@ nav.scrolled {
 }
 
 .hero-page-title {
-  font-size: clamp(72px, 12vw, 120px);
-  /* Targeted 112px range */
-  line-height: 1.0;
+  font-size: clamp(72px, 10vw, 112px);
+  /* Tightened to exactly 112px max */
+  line-height: 0.95;
+  /* Aggressive line height */
   margin-bottom: 40px;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1.2s var(--ease-expo) 0.1s forwards;
+  letter-spacing: -2px;
+}
+
+.hero-page-title .serif {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 10px;
 }
 
 /* ── COMPONENTS ── */
