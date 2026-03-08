@@ -13,6 +13,7 @@
   --white: #FFFFFF;
   --border: rgba(196, 168, 255, 0.1);
   --border-bright: rgba(196, 168, 255, 0.3);
+  --texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3F%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 
   --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -32,6 +33,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   background: var(--ink);
+  overflow-x: hidden;
 }
 
 body {
@@ -42,7 +44,8 @@ body {
   font-weight: 400;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none;
+  position: relative;
+  width: 100%;
 }
 
 a {
@@ -495,62 +498,115 @@ nav.scrolled {
   }
 
   .hero-page-title {
-    font-size: clamp(48px, 12vw, 64px);
+    font-size: clamp(36px, 10vw, 56px);
+    /* Further reduced to prevent cut-off */
+    line-height: 1.1;
+    letter-spacing: -1px;
   }
 
   .section-padding {
     padding: 80px 0;
   }
 
+  /* Improved density */
   .container {
     padding: 0 25px;
   }
 
   nav {
     padding: 0 25px;
+    background: rgba(10, 2, 20, 0.9);
   }
 
   .nav-actions .nav-cta {
     display: none;
   }
 
-  /* Hide secondary CTA on mobile */
   .nav-logo span {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .nav-overlay-link {
-    font-size: 48px;
-    letter-spacing: -2px;
+    font-size: clamp(32px, 8vw, 42px);
+    letter-spacing: -1px;
   }
 
   .hero-desc {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    max-width: 100%;
   }
 
   .roi-stat {
-    font-size: 60px;
+    font-size: 48px;
   }
 
+  /* Scaled down */
   .stats-strip {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 40px !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
     text-align: center;
+  }
+
+  .stats-item {
+    margin-bottom: 0 !important;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stats-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Kill all horizontal overflows aggressively */
+  [style*="font-size: 200px"],
+  [style*="font-size: 180px"],
+  .bg-text {
+    font-size: 40px !important;
+    /* Drastic reduction for bg text */
+    opacity: 0.05 !important;
+  }
+
+  /* Fix nav collision when menu is open */
+  .nav-overlay.open~nav {
+    background: transparent !important;
+    border-bottom: none !important;
+  }
+
+  /* Surgical heading fix for About/Services */
+  h1,
+  h2 {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  h2[style*="font-size: 80px"],
+  h2[style*="font-size: 72px"],
+  h2[style*="font-size: 64px"] {
+    font-size: 32px !important;
+    /* Aggressive hit to stop truncation */
+    line-height: 1.2 !important;
   }
 }
 
 @media (max-width: 480px) {
-  .stats-strip {
-    grid-template-columns: 1fr !important;
+  .hero-page-title {
+    font-size: 34px;
   }
 
-  .hero-page-title {
-    font-size: 42px;
-    line-height: 1.1;
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+    padding: 18px 30px !important;
+    font-size: 15px !important;
+  }
+
+  .card {
+    padding: 40px 30px;
   }
 
   .nav-overlay-link {
-    font-size: 36px;
+    font-size: 28px;
   }
 }

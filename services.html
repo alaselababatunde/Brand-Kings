@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <!-- Global texture overlay -->
+    <div
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.03; mix-blend-mode: overlay; background-image: var(--texture); z-index: 9998;">
+    </div>
 
     <!-- NAV -->
     <nav>
@@ -57,29 +61,110 @@
     </header>
 
     <!-- SERVICES GRID -->
+    <section class="section-padding" style="background: var(--ink); position: relative;">
+        <!-- Visual offset -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(120,40,255,0.02) 0%, transparent 100%); pointer-events: none;">
+        </div>
+
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 100px; align-items: center;">
+                <div class="reveal">
+                    <div class="mono" style="margin-bottom: 20px;">SYSTEM 03</div>
+                    <h2 style="font-size: clamp(48px, 10vw, 80px); margin-bottom: 30px;">Digital<br><span
+                            class="serif">Growth</span></h2>
+                    <p style="color: var(--mist); line-height: 1.8; font-size: 18px; margin-bottom: 40px;">
+                        Scaling is a science. We deploy autonomous growth engines that work while you sleep, capturing
+                        market share through SEO, content velocity, and omni-channel presence.
+                    </p>
+                    <ul class="mono" style="font-size: 11px; color: var(--gold-light); line-height: 2.5;">
+                        <li>✓ Sustainable SEO Growth</li>
+                        <li>✓ Content Velocity Engine</li>
+                        <li>✓ Omni-Channel Presence</li>
+                    </ul>
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/9; background: var(--purple-light); border: 1px solid var(--border); overflow: hidden;">
+                        <img src="images/results-visual.png"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;" alt="Growth Visual">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding" style="background: #0f0216; position: relative; overflow: hidden;">
+        <!-- Radial glow -->
+        <div
+            style="position: absolute; bottom: -20%; right: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(201,150,12,0.05) 0%, transparent 60%); pointer-events: none;">
+        </div>
+
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 100px; align-items: center;">
+                <div class="reveal" style="order: 2;">
+                    <div class="mono" style="margin-bottom: 20px;">SYSTEM 02</div>
+                    <h2 style="font-size: clamp(48px, 10vw, 80px); margin-bottom: 30px;">Strategic<br><span
+                            class="serif">Advertising</span></h2>
+                    <p style="color: var(--mist); line-height: 1.8; font-size: 18px; margin-bottom: 40px;">
+                        Awareness is a vanity metric. Revenue is the only metric. Our advertising systems are built on
+                        psychological triggers and data-backed targeting to convert strangers into buyers on autopilot.
+                    </p>
+                    <ul class="mono" style="font-size: 11px; color: var(--gold-light); line-height: 2.5;">
+                        <li>✓ Multi-Channel Paid Ads</li>
+                        <li>✓ Conversion Funnel Build</li>
+                        <li>✓ Retargeting Infrastructure</li>
+                    </ul>
+                </div>
+                <div class="reveal" style="order: 1;">
+                    <div
+                        style="width: 100%; aspect-ratio: 16/9; background: var(--purple-light); border: 1px solid var(--border); overflow: hidden;">
+                        <img src="images/system-visual.png"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;"
+                            alt="Advertising System">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding" style="background: var(--purple); position: relative; overflow: hidden;">
+        <!-- Visual enrichment -->
+        <div
+            style="position: absolute; top: -10%; right: -10%; width: 40%; height: 40%; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%); pointer-events: none;">
+        </div>
+
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+                <div class="reveal">
+                    <h2 style="font-size: clamp(42px, 8vw, 64px); line-height: 1.1;">The Technical<br><span
+                            class="serif">Advantage.</span></h2>
+                    <p style="color: var(--mist); margin-top: 30px; font-size: 17px; line-height: 1.8;">
+                        Every line of code and every pixel is engineered for conversion. We don't just build websites;
+                        we
+                        build sales-generating infrastructure that works for your business 24/7.
+                    </p>
+                </div>
+                <div class="reveal" style="background: var(--ink); padding: 50px; border: 1px solid var(--border);">
+                    <div class="mono" style="font-size: 12px; margin-bottom: 20px; color: var(--gold);">OUR CAPABILITIES
+                    </div>
+                    <ul class="mono"
+                        style="font-size: 12px; color: var(--white); line-height: 2.5; list-style: none; padding: 0;">
+                        <li>↳ High-Performance Web Apps</li>
+                        <li>↳ CRM & Automation Flows</li>
+                        <li>↳ Custom Lead Analytics</li>
+                        <li>↳ E-commerce Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="section-padding" style="background: var(--ink);">
         <div class="container">
             <div class="card-grid reveal">
-                <!-- Branding -->
-                <div class="card">
-                    <div class="mono" style="margin-bottom: 20px;">SYSTEM 01</div>
-                    <h3 style="font-size: 32px; margin-bottom: 20px;">Identity & Branding</h3>
-                    <p style="color: var(--mist); line-height: 1.6; margin-bottom: 30px;">
-                        Visual persuasion engineered to stop scrolls and start conversations. We build the visual and
-                        emotional architecture of your brand.
-                    </p>
-                    <ul class="mono" style="font-size: 10px; color: var(--gold-light); line-height: 2;">
-                        <li>· Visual Identity Design</li>
-                        <li>· Brand Strategy</li>
-                        <li>· Messaging & Voice</li>
-                        <li>· Brand Audits</li>
-                    </ul>
-                </div>
                 <!-- Advertising -->
-                <div class="card">
-                    <div class="mono" style="margin-bottom: 20px;">SYSTEM 02</div>
+                <div class="card" style="background: var(--purple-light);">
+                    <div class="mono" style="margin-bottom: 20px; color: var(--white);">SYSTEM 02</div>
                     <h3 style="font-size: 32px; margin-bottom: 20px;">Strategic Advertising</h3>
-                    <p style="color: var(--mist); line-height: 1.6; margin-bottom: 30px;">
+                    <p style="color: var(--white); line-height: 1.6; margin-bottom: 30px;">
                         Multi-channel ad deployment designed to 10x your reach. We move your customers from "Who are
                         you?" to "Take my money!"
                     </p>
@@ -91,10 +176,10 @@
                     </ul>
                 </div>
                 <!-- Digital Marketing -->
-                <div class="card">
-                    <div class="mono" style="margin-bottom: 20px;">SYSTEM 03</div>
+                <div class="card" style="background: var(--purple-light);">
+                    <div class="mono" style="margin-bottom: 20px; color: var(--white);">SYSTEM 03</div>
                     <h3 style="font-size: 32px; margin-bottom: 20px;">Performance Marketing</h3>
-                    <p style="color: var(--mist); line-height: 1.6; margin-bottom: 30px;">
+                    <p style="color: var(--white); line-height: 1.6; margin-bottom: 30px;">
                         Hyper-optimized conversion channels. We live rent-free in the minds of your dream buyers through
                         tailor-made digital strategies.
                     </p>
@@ -106,10 +191,10 @@
                     </ul>
                 </div>
                 <!-- Production -->
-                <div class="card">
-                    <div class="mono" style="margin-bottom: 20px;">SYSTEM 04</div>
+                <div class="card" style="background: var(--purple-light);">
+                    <div class="mono" style="margin-bottom: 20px; color: var(--white);">SYSTEM 04</div>
                     <h3 style="font-size: 32px; margin-bottom: 20px;">Visual Production</h3>
-                    <p style="color: var(--mist); line-height: 1.6; margin-bottom: 30px;">
+                    <p style="color: var(--white); line-height: 1.6; margin-bottom: 30px;">
                         Motion persuasion. High-end video production and creative storytelling that compresses trust and
                         creates desire.
                     </p>

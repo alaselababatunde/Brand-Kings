@@ -11,21 +11,12 @@
 
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <div class="nav-logo">
-            <a href="index.html">
-                <img src="logo.jpeg" alt="Brand Kings Logo">
-                <span>Brand<em>Kings</em></span>
-            </a>
-        </div>
-        <div class="nav-actions">
-            <a href="contact.html" class="nav-cta">GET STARTED</a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+    <a href="contact.html" class="nav-cta">GET STARTED</a>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+    </div>
+    </div>
     </nav>
 
     <!-- NAV OVERLAY -->
@@ -47,18 +38,23 @@
         <div class="hero-page-overlay"></div>
         <div class="container">
             <div class="hero-page-content">
-                <div class="hero-page-eyebrow mono reveal">OUR STORY</div>
-                <h1 class="hero-page-title reveal">
+                <div class="hero-page-eyebrow mono reveal">OUR IDENTITY</div>
+                <h1 class="hero-page-title reveal" style="font-size: clamp(48px, 12vw, 112px);">
                     Redefining The<br>
-                    <span class="serif">Creativity Standard.</span>
+                    <span class="serif">African Narrative.</span>
                 </h1>
             </div>
         </div>
     </header>
 
     <!-- MISSION & VISION -->
-    <section class="section-padding" style="background: var(--ink);">
-        <div class="container">
+    <section class="section-padding" style="background: var(--ink); position: relative; overflow: hidden;">
+        <!-- Visual enrichment for "blank" section -->
+        <div
+            style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: url('images/hero-bg.png') no-repeat center right; background-size: contain; opacity: 0.1; pointer-events: none;">
+        </div>
+
+        <div class="container" style="position: relative; z-index: 1;">
             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 100px; align-items: start;">
                 <div class="reveal">
                     <div class="mono reveal">THE MISSION</div>
