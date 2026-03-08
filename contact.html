@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reach Us — Brand Kings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="logo.jpeg" alt="Brand Kings Logo">
+                <span>Brand<em>Kings</em></span>
+            </a>
+        </div>
+        <div class="nav-actions">
+            <a href="contact.html" class="nav-cta">GET STARTED</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay">
+        <div class="nav-overlay-links">
+            <a href="index.html" class="nav-overlay-link">HOME</a>
+            <a href="about.html" class="nav-overlay-link">WHO WE ARE</a>
+            <a href="services.html" class="nav-overlay-link">WHAT WE DO</a>
+            <a href="team.html" class="nav-overlay-link">OUR TEAM</a>
+            <a href="pricing.html" class="nav-overlay-link">PRICING</a>
+            <a href="work.html" class="nav-overlay-link">OUR WORK</a>
+            <a href="contact.html" class="nav-overlay-link">REACH US</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero-page">
+        <div class="hero-page-bg" style="background-image: url('images/cta-bg.png'); filter: brightness(0.4);"></div>
+        <div class="hero-page-overlay"></div>
+        <div class="container">
+            <div class="hero-page-content">
+                <div class="hero-page-eyebrow mono reveal">GET IN TOUCH</div>
+                <h1 class="hero-page-title reveal">
+                    Crack The Flood<br>
+                    <span class="serif">Gates Open.</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-padding" style="background: var(--ink);">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 100px;">
+                <!-- Form Info -->
+                <div class="reveal">
+                    <div class="mono" style="margin-bottom: 30px;">THE APPLICATION</div>
+                    <h2 style="font-size: 48px; margin-bottom: 40px;">Ready to deploy <span class="serif">your
+                            system?</span></h2>
+                    <p style="color: var(--mist); line-height: 1.8; font-size: 18px; margin-bottom: 40px;">
+                        We review every application personally. If you qualify, you'll receive a custom growth gap
+                        report built specifically for your business before you pay a single kobo.
+                    </p>
+
+                    <div style="margin-top: 60px;">
+                        <div class="mono" style="margin-bottom: 20px; font-size: 10px;">DIRECT CHANNELS</div>
+                        <div style="margin-bottom: 20px;">
+                            <a href="https://wa.me/2347066233622" class="serif hover-target"
+                                style="font-size: 32px; color: var(--gold);">WhatsApp Us →</a>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <a href="mailto:hello@brandkings.com" class="serif hover-target"
+                                style="font-size: 32px; color: var(--gold);">Email The Team →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="reveal" style="background: var(--purple); padding: 60px; border: 1px solid var(--border);">
+                    <form id="contactForm"
+                        onsubmit="event.preventDefault(); document.getElementById('contactForm').style.display='none'; document.getElementById('successMsg').style.display='block';">
+                        <div style="margin-bottom: 30px;">
+                            <label class="mono" style="display: block; margin-bottom: 15px; font-size: 10px;">YOUR
+                                NAME</label>
+                            <input type="text" placeholder="John Doe" required
+                                style="width: 100%; padding: 15px 0; border-bottom: 1px solid var(--border); color: var(--white); font-size: 18px;">
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <label class="mono" style="display: block; margin-bottom: 15px; font-size: 10px;">BUSINESS
+                                NAME</label>
+                            <input type="text" placeholder="The Best Company" required
+                                style="width: 100%; padding: 15px 0; border-bottom: 1px solid var(--border); color: var(--white); font-size: 18px;">
+                        </div>
+                        <div style="margin-bottom: 30px;">
+                            <label class="mono" style="display: block; margin-bottom: 15px; font-size: 10px;">EMAIL
+                                ADDRESS</label>
+                            <input type="email" placeholder="john@company.com" required
+                                style="width: 100%; padding: 15px 0; border-bottom: 1px solid var(--border); color: var(--white); font-size: 18px;">
+                        </div>
+                        <div style="margin-bottom: 40px;">
+                            <label class="mono" style="display: block; margin-bottom: 15px; font-size: 10px;">MESSAGE /
+                                GOALS</label>
+                            <textarea placeholder="Tell us about your growth goals..." required
+                                style="width: 100%; padding: 15px 0; border-bottom: 1px solid var(--border); color: var(--white); font-size: 18px; min-height: 100px; resize: none;"></textarea>
+                        </div>
+                        <button type="submit" class="nav-cta" style="width: 100%; padding: 25px; font-size: 16px;">HELL
+                            YEAH, LET'S GO X3</button>
+                    </form>
+                    <div id="successMsg" style="display: none; text-align: center; padding: 40px 0;">
+                        <h2 class="serif" style="font-size: 40px; color: var(--gold); margin-bottom: 20px;">Submitted
+                            Successfully.</h2>
+                        <p style="color: var(--mist); line-height: 1.6;">Our founders will review your application and
+                            reach out within 48 hours. Get ready to scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="section-padding" style="background: var(--ink); border-top: 1px solid var(--border);">
+        <div class="container" style="text-align: center;">
+            <div class="nav-logo" style="margin-bottom: 40px;">
+                <img src="logo.jpeg" alt="Brand Kings Logo">
+                <span style="font-size: 32px;">Brand<em>Kings</em></span>
+            </div>
+            <p style="color: var(--mist); font-size: 12px; letter-spacing: 2px;">© 2025 BRAND KINGS MEDIA GROUP. ALL
+                RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+</body>
+
+</html>
