@@ -158,6 +158,35 @@ h3 {
   font-size: 16px !important;
 }
 
+.roi-stat {
+  font-size: 80px;
+  color: var(--gold);
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+/* Forms */
+input,
+textarea {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--white);
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--gold) !important;
+}
+
+label.mono {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 10px;
+}
+
 .mono {
   font-family: 'DM Mono', monospace;
   font-size: 12px;
