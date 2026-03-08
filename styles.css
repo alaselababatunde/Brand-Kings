@@ -325,7 +325,7 @@ nav.scrolled {
   display: block;
   font-size: clamp(56px, 10vw, 120px);
   font-weight: 800;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
   color: var(--mist);
   transition: 0.5s var(--ease-expo);
   margin-bottom: 15px;
@@ -469,7 +469,7 @@ nav.scrolled {
   transform: translateY(0);
 }
 
-/* ── RESPONSIVE ── */
+/* ── MOBILE OPTIIZATION ── */
 @media (max-width: 1100px) {
   nav {
     padding: 0 40px;
@@ -482,6 +482,11 @@ nav.scrolled {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 60px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -490,18 +495,62 @@ nav.scrolled {
   }
 
   .hero-page-title {
-    font-size: 64px;
+    font-size: clamp(48px, 12vw, 64px);
   }
 
   .section-padding {
-    padding: 120px 0;
+    padding: 80px 0;
   }
 
   .container {
-    padding: 0 30px;
+    padding: 0 25px;
   }
 
   nav {
-    padding: 0 30px;
+    padding: 0 25px;
+  }
+
+  .nav-actions .nav-cta {
+    display: none;
+  }
+
+  /* Hide secondary CTA on mobile */
+  .nav-logo span {
+    font-size: 22px;
+  }
+
+  .nav-overlay-link {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .roi-stat {
+    font-size: 60px;
+  }
+
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 40px !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-page-title {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .nav-overlay-link {
+    font-size: 36px;
   }
 }

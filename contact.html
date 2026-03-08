@@ -70,41 +70,35 @@
                     </p>
 
                     <div style="margin-top: 60px;">
-                        <div class="mono" style="margin-bottom: 20px; font-size: 10px;">DIRECT CHANNELS</div>
+                        <div class="mono" style="margin-bottom: 20px; font-size: 10px;">DIRECT CHANNEL</div>
                         <div style="margin-bottom: 20px;">
-                            <a href="https://wa.me/2347066233622" class="serif hover-target"
+                            <a href="https://wa.me/2349078239676" class="serif hover-target"
                                 style="font-size: 32px; color: var(--gold);">WhatsApp Us →</a>
-                        </div>
-                        <div style="margin-bottom: 20px;">
-                            <a href="mailto:hello@brandkings.com" class="serif hover-target"
-                                style="font-size: 32px; color: var(--gold);">Email The Team →</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Form -->
                 <div class="reveal" style="background: var(--purple); padding: 60px; border: 1px solid var(--border);">
-                    <form id="contactForm"
-                        onsubmit="event.preventDefault(); document.getElementById('contactForm').style.display='none'; document.getElementById('successMsg').style.display='block';">
+                    <form id="contactForm">
                         <div style="margin-bottom: 30px;">
                             <label class="mono">YOUR NAME</label>
-                            <input type="text" placeholder="John Doe" required>
+                            <input type="text" id="formName" placeholder="John Doe" required>
                         </div>
                         <div style="margin-bottom: 30px;">
                             <label class="mono">BUSINESS NAME</label>
-                            <input type="text" placeholder="The Best Company" required>
+                            <input type="text" id="formBusiness" placeholder="The Best Company" required>
                         </div>
                         <div style="margin-bottom: 30px;">
-                            <label class="mono">EMAIL ADDRESS</label>
-                            <input type="email" placeholder="john@company.com" required>
+                            <label class="mono">YOUR PHONE NUMBER</label>
+                            <input type="tel" id="formPhone" placeholder="+234 ..." required>
                         </div>
                         <div style="margin-bottom: 40px;">
                             <label class="mono">MESSAGE / GOALS</label>
-                            <textarea placeholder="Tell us about your growth goals..." required
+                            <textarea id="formMessage" placeholder="Tell us about your growth goals..." required
                                 style="min-height: 100px; resize: none;"></textarea>
                         </div>
-                        <button type="submit" class="nav-cta hero-btn" style="width: 100%;">HELL YEAH, LET'S GO
-                            X3</button>
+                        <button type="submit" class="nav-cta hero-btn" style="width: 100%;">APPLY TO ACTIVATE</button>
                     </form>
                     <div id="successMsg" style="display: none; text-align: center; padding: 40px 0;">
                         <h2 class="serif" style="font-size: 40px; color: var(--gold); margin-bottom: 20px;">Submitted
@@ -130,6 +124,26 @@
     </footer>
 
     <script src="nav.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('formName').value;
+            const business = document.getElementById('formBusiness').value;
+            const phone = document.getElementById('formPhone').value;
+            const message = document.getElementById('formMessage').value;
+
+            const whatsappNumber = "2349078239676";
+            const text = `*New Lead Activation*%0A%0A*Name:* ${name}%0A*Business:* ${business}%0A*Phone:* ${phone}%0A*Goals:* ${message}`;
+
+            const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+            window.open(url, '_blank');
+
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('successMsg').style.display = 'block';
+        });
+    </script>
 </body>
 
 </html>
