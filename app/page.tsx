@@ -1,6 +1,9 @@
 import Hero from '../components/Hero'
 import ApplyForm from '../components/ApplyForm'
 import Section from '../components/Section'
+import StatsCounter from '../components/StatsCounter'
+import TeamSection from '../components/TeamSection'
+import FlowDiagram from '../components/FlowDiagram'
 import React from 'react'
 
 export default function Home() {
@@ -9,9 +12,22 @@ export default function Home() {
       <Hero />
 
       <Section id="what" className="py-12">
-        <div className="container">
-          <h2 className="text-2xl font-bold">What We Are</h2>
-          <p className="mt-3 text-[var(--muted)]">BrandKings builds and installs fully engineered client acquisition systems — brand strategy, conversion funnels, paid ads, content, automation, and follow-up systems all built to work together.</p>
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-extrabold">Your Business Needs A Client Acquisition System — Not Another Agency</h2>
+            <p className="muted mt-4">BrandKings builds and installs fully engineered client acquisition systems — brand strategy, funnels, paid ads, content, automation and follow-up systems all built to work together and acquire clients automatically.</p>
+
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              <StatsCounter number={7} label={"Specialists per client system"} />
+              <StatsCounter number={5} label={"Phases built before you pay"} />
+              <StatsCounter number={0} label={"Hours required to run system"} />
+              <StatsCounter number={1} label={"Day 1 deployment"} />
+            </div>
+          </div>
+
+          <div>
+            <img src="/images/hero-agency.svg" alt="Agency cinematic" className="w-full rounded-lg shadow-lg" />
+          </div>
         </div>
       </Section>
 
@@ -24,15 +40,14 @@ export default function Home() {
 
       <Section id="system" className="py-12">
         <div className="container">
-          <h2 className="text-2xl font-bold">The BrandKings System</h2>
-          <p className="mt-3 text-[var(--muted)]">Activated. Automated. Running. We implement 5 phases to deliver a functioning client acquisition engine tailored to your niche.</p>
+          <FlowDiagram />
         </div>
       </Section>
 
       <Section id="how" className="py-12">
         <div className="container">
           <h2 className="text-2xl font-bold">How It Works</h2>
-          <ol className="mt-4 text-[var(--muted)] list-decimal list-inside">
+          <ol className="mt-4 text-[var(--muted)] list-decimal list-inside space-y-3">
             <li>Phase 1 — Market & niche analysis</li>
             <li>Phase 2 — Brand positioning</li>
             <li>Phase 3 — Funnel engineering</li>
@@ -41,6 +56,8 @@ export default function Home() {
           </ol>
         </div>
       </Section>
+
+      <TeamSection />
 
       <section className="py-12">
         <div className="container">
