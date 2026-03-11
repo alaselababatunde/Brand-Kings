@@ -75,16 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = form.querySelector('button[type="submit"]');
             const name = form.querySelector('#name').value.trim();
             const phone = form.querySelector('#phone').value.trim();
-            const service = form.querySelector('#service').value;
-            const message = form.querySelector('#message').value.trim();
+            const niche = form.querySelector('#niche').value;
+            const challenge = form.querySelector('#challenge').value.trim();
 
             // Build WhatsApp message
             const text = encodeURIComponent(
                 `Hi BrandKings! 👑\n\n` +
                 `Name: ${name}\n` +
                 (phone ? `Phone: ${phone}\n` : '') +
-                (service ? `Service: ${service}\n` : '') +
-                (message ? `\nMessage: ${message}` : '')
+                (niche ? `Niche: ${niche}\n` : '') +
+                (challenge ? `\nGrowth Challenge: ${challenge}` : '')
             );
 
             // Change button state briefly
@@ -102,6 +102,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 600);
         });
     }
+
+    /* ── Case Study Tab Switcher ── */
+    const tabs = document.querySelectorAll('.cs-tab');
+    const panels = document.querySelectorAll('.cs-panel');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-tab');
+
+            // Toggle active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Toggle panels
+            panels.forEach(p => {
+                p.classList.remove('active');
+                if (p.id === target) p.classList.add('active');
+            });
+        });
+    });
 
     /* ── Custom Cursor ── */
     const cursor = document.querySelector('.cursor');

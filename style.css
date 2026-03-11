@@ -495,8 +495,23 @@ header.scrolled {
 }
 
 .service-card h3 {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-size: 20px;
+    /* Reduced from 22px */
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+}
+
+/* Fix for long titles like CONVERSION */
+.fit-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+    max-width: 100%;
+    hyphens: auto;
 }
 
 .service-card p {
@@ -851,11 +866,111 @@ header.scrolled {
 
 /* Contact Form */
 .contact-form-wrap {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 48px 40px;
     overflow: hidden;
-    /* Fix text outside chatbox */
     position: relative;
+}
+
+/* Case Study Tabs */
+.cs-tabs {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    border: 1px solid var(--glass-border);
+    margin-bottom: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cs-tab {
+    flex: 1;
+    min-width: 150px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    border-right: 1px solid var(--glass-border);
+    padding: 16px 20px;
+    cursor: none !important;
+    transition: all 0.3s ease;
+}
+
+.cs-tab:last-child {
+    border-right: none;
+}
+
+.cs-tab:hover {
+    background: rgba(124, 77, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.cs-tab.active {
+    background: var(--violet);
+    color: white;
+}
+
+.cs-panel {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--glass-border);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cs-panel.active {
+    display: grid;
+}
+
+.cs-panel>div {
+    background: var(--dark-bg);
+    padding: 48px 40px;
+}
+
+/* Team Grid */
+.specialists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.specialist {
+    padding: 30px;
+    border-left: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.specialist:hover {
+    border-left-color: var(--gold);
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.spec-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.spec-role {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.spec-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 .contact-form h3 {
