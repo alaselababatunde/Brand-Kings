@@ -153,12 +153,12 @@ img {
 .btn-primary {
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
   color: var(--ink);
-  box-shadow: 0 4px 20px rgba(201,150,12,0.25);
+  box-shadow: 0 6px 18px rgba(var(--gold-rgb), 0.18);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(var(--gold-rgb), 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(var(--gold-rgb), 0.22);
 }
 
 .btn-outline {
@@ -545,6 +545,53 @@ header.scrolled {
   margin: 0 auto 4rem;
 }
 
+/* Services grid and cards (used by subbrand pages) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.service-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--violet-rgb), 0.08);
+  color: var(--violet);
+  flex-shrink: 0;
+}
+
+.service-card h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.0625rem;
+  color: var(--text-primary);
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .section-label {
   font-size: 0.6875rem;
   font-weight: 600;
@@ -782,6 +829,26 @@ header.scrolled {
   background: linear-gradient(135deg, var(--violet) 0%, var(--purple) 100%);
   position: relative;
   overflow: hidden;
+}
+
+/* Reusable purple gradient background for sub-sections */
+.bg-purple-gradient {
+  background: linear-gradient(180deg, rgba(117,17,213,0.06) 0%, rgba(49,5,92,0.06) 100%);
+}
+
+/* Header/mobile spacing tweaks */
+@media (max-width: 768px) {
+  header {
+    height: 64px;
+  }
+
+  .back-link {
+    padding-top: 72px;
+  }
+
+  .logo img {
+    height: 28px;
+  }
 }
 
 .cta-section::before {
