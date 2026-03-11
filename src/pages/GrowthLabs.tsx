@@ -49,14 +49,14 @@ function GrowthLabs() {
               <span className="logo-text">Growth<span>Labs</span></span>
             </Link>
           </div>
-          <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <nav id="main-navigation" role="navigation" className={`nav-links ${menuOpen ? 'active' : ''}`}>
             <ul>
               <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a></li>
               <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a></li>
               <li><a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Get Started</a></li>
             </ul>
           </nav>
-          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <button type="button" className="menu-toggle" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

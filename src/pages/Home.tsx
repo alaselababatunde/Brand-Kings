@@ -78,7 +78,7 @@ function Home() {
 
           {/* Desktop Nav */}
           <nav className="nav-desktop">
-            <div className="nav-links">
+            <div className="nav-links" id="main-navigation" role="navigation">
               <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a>
               <a href="#philosophy" onClick={(e) => { e.preventDefault(); scrollToSection('philosophy'); }}>Philosophy</a>
               <a href="#process" onClick={(e) => { e.preventDefault(); scrollToSection('process'); }}>Process</a>
@@ -106,7 +106,7 @@ function Home() {
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <button type="button" className="menu-toggle" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

@@ -4,6 +4,7 @@
 :root {
   /* core color palette from source.html */
   --ink: #1A0033;
+  --violet-light: #B388FF;
   --deep: #220044;
   --purple: #31055C;
   --violet: #7511D5;
@@ -33,6 +34,10 @@
   /* easing shortcuts */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-method:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(var(--gold-rgb), 0.2);
 }
 
 * {
@@ -404,6 +409,63 @@ header.scrolled {
   padding: 2rem 0;
 }
 
+/* Responsive tweaks for hero and CTAs */
+@media (max-width: 768px) {
+  .subbrand-hero {
+    padding-top: 120px;
+    padding-bottom: 2.5rem;
+    min-height: 60vh;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 1.25rem 0;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    line-height: 1.05;
+    text-align: left;
+  }
+
+  .hero-subtitle {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-form-wrap,
+  .contact-form-wrapper {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+  }
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -447,10 +509,28 @@ header.scrolled {
   flex-wrap: wrap;
 }
 
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* Section Styles */
 .section {
   padding: 6rem 0;
   position: relative;
+}
+
+.section-padding {
+  padding: 6rem 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 8rem 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -769,7 +849,7 @@ header.scrolled {
   transition: all 0.3s;
 }
 
-..contact-method:hover {
+.contact-method:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(var(--gold-rgb), 0.2);
 }
@@ -985,6 +1065,18 @@ header.scrolled {
 
 .back-btn:hover {
   color: var(--gold);
+}
+
+.bg-purple-gradient {
+  background: linear-gradient(180deg, rgba(117,17,213,0.06) 0%, rgba(26,0,51,0.02) 100%);
+  border-radius: 12px;
+}
+
+.work-image {
+  height: 220px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
 }
 
 .subbrand-badge {

@@ -49,14 +49,14 @@ function InspiredCreativity() {
               <span className="logo-text">Inspired<span>Creativity</span></span>
             </Link>
           </div>
-          <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <nav id="main-navigation" role="navigation" className={`nav-links ${menuOpen ? 'active' : ''}`}>
             <ul>
               <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a></li>
               <li><a href="#work" onClick={(e) => { e.preventDefault(); scrollToSection('work'); }}>Work</a></li>
               <li><a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Start Project</a></li>
             </ul>
           </nav>
-          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <button type="button" className="menu-toggle" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
