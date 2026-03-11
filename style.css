@@ -39,6 +39,45 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    cursor: none;
+    /* Hide default cursor */
+}
+
+/* Custom Cursor */
+.cursor {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent cursor from showing on interactive elements */
+a,
+button,
+select,
+input,
+textarea {
+    cursor: none !important;
 }
 
 h1,
@@ -465,56 +504,7 @@ header.scrolled {
     font-size: 16px;
 }
 
-/* Scroll indicator animation */
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    opacity: 0.8;
-}
-
-.mouse {
-    width: 24px;
-    height: 40px;
-    border: 2px solid var(--text-secondary);
-    border-radius: 20px;
-    position: relative;
-}
-
-.mouse::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 8px;
-    background: var(--gold);
-    border-radius: 2px;
-    animation: mouseScroll 2s infinite;
-}
-
-@keyframes mouseScroll {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, 0);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translate(-50%, 10px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(-50%, 20px);
-    }
-}
+/* Scroll indicator removed per user request */
 
 @media (max-width: 992px) {
     .about-grid {
@@ -863,6 +853,9 @@ header.scrolled {
 .contact-form-wrap {
     border-radius: 20px;
     padding: 48px 40px;
+    overflow: hidden;
+    /* Fix text outside chatbox */
+    position: relative;
 }
 
 .contact-form h3 {

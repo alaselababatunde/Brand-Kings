@@ -103,4 +103,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ── Custom Cursor ── */
+    const cursor = document.querySelector('.cursor');
+    const ring = document.querySelector('.cursor-ring');
+
+    document.addEventListener('mousemove', e => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+        ring.style.left = `${e.clientX}px`;
+        ring.style.top = `${e.clientY}px`;
+    });
+
+    const interactiveElements = document.querySelectorAll('a, button, .service-card, .social-card, .portfolio-item');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            ring.style.width = '60px';
+            ring.style.height = '60px';
+            ring.style.borderColor = 'var(--gold)';
+            ring.style.backgroundColor = 'rgba(124, 77, 255, 0.1)';
+        });
+        el.addEventListener('mouseleave', () => {
+            ring.style.width = '34px';
+            ring.style.height = '34px';
+            ring.style.borderColor = 'rgba(255, 215, 0, 0.4)';
+            ring.style.backgroundColor = 'transparent';
+        });
+    });
+
 });
