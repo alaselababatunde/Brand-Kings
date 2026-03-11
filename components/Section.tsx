@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, HTMLMotionProps } from 'framer-motion'
 
-type SectionProps = React.HTMLAttributes<HTMLElement> & {
+type SectionProps = HTMLMotionProps<'section'> & {
   className?: string
   children: React.ReactNode
 }
