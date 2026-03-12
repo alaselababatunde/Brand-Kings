@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — BrandKings Client Acquisition Systems</title>
+    <link rel="icon" href="logo.jpeg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px 36px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-dim);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(201, 150, 12, 0.1);
+        }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--text-sub);
+            line-height: 1.75;
+            margin-bottom: 24px;
+        }
+
+        .service-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .service-list li {
+            font-size: 14px;
+            color: var(--text-sub);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-list li::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+          <div class="mobile-nav-overlay">
+    <button class="mobile-close">×</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="system.html">System</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="team.html">Team</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="industries.html">Industries</a>
+    <div style="display: flex; gap: 20px; font-size: 18px; margin-top: -10px; margin-bottom: 10px;">
+        <a href="foodlas/index.html" style="font-size: 18px; opacity: 0.8;">Foodlas</a>
+        <a href="petlang/index.html" style="font-size: 18px; opacity: 0.8;">Petlang</a>
+        <a href="fitflux/index.html" style="font-size: 18px; opacity: 0.8;">Fitflux</a>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+    <a href="contact.html">Contact</a>
+    <a href="apply.html" class="btn-primary" style="margin-top: 16px;">Apply Now →</a>
+  </div>
+              <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.jpeg" class="nav-logo-img" alt="BrandKings">
+        BrandKings
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="system.html">System</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="apply.html" class="btn-primary">Apply Now →</a>
+        <button class="nav-hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+    <section
+        style="padding: 160px 0 80px; background: linear-gradient(180deg, #1C003A 0%, var(--bg) 100%); text-align: center; border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="badge reveal" style="margin-bottom: 20px;">What We Build</div>
+            <h1 style="font-size: clamp(36px, 6vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 20px;"
+                class="reveal d-1">All Services,<br>One Integrated System</h1>
+            <p style="font-size: 18px; color: var(--text-sub); max-width: 560px; margin: 0 auto; line-height: 1.7;"
+                class="reveal d-2">Every service below is a component of your client acquisition system — not a
+                standalone offering. They work together.</p>
+        </div>
+    </section>
+
+    <section class="section-pad" style="background: var(--bg);">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">📢</div>
+                    <h3>Paid Traffic Systems</h3>
+                    <p>Multi-platform ad campaigns built around cost-per-qualified-lead. We run Meta, TikTok, and Google
+                        — all targeting niche-specific audiences with tested creative.</p>
+                    <ul class="service-list">
+                        <li>Meta Ads (Facebook + Instagram)</li>
+                        <li>TikTok Ads</li>
+                        <li>Google Ads (Search + Display)</li>
+                        <li>A/B ad creative testing</li>
+                        <li>Budget optimisation</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal d-2">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Funnel & Landing Page Builds</h3>
+                    <p>Conversion-optimised landing pages and opt-in flows designed to turn cold traffic into qualified
+                        leads. Built and tested before they go live.</p>
+                    <ul class="service-list">
+                        <li>Landing page design & build</li>
+                        <li>Opt-in flow architecture</li>
+                        <li>Lead magnet creation</li>
+                        <li>Thank-you page sequences</li>
+                        <li>CRO (Conversion Rate Optimisation)</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🤖</div>
+                    <h3>Automation & AI Systems</h3>
+                    <p>AI chatbots, CRM workflows, and scheduling systems that handle your entire client acquisition
+                        pipeline 24/7 without human intervention.</p>
+                    <ul class="service-list">
+                        <li>AI chatbot build & deployment</li>
+                        <li>CRM automation setup</li>
+                        <li>WhatsApp automation</li>
+                        <li>Email & SMS sequences</li>
+                        <li>Calendar/booking automation</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal d-2">
+                    <div class="service-icon">📱</div>
+                    <h3>Social Media & Content Engine</h3>
+                    <p>A fully managed organic social content system that drives free inbound traffic consistently —
+                        Reels, TikToks, carousels, and posts, all on schedule.</p>
+                    <ul class="service-list">
+                        <li>Content strategy & calendar</li>
+                        <li>Video content production</li>
+                        <li>Graphic design</li>
+                        <li>Platform management</li>
+                        <li>Growth & engagement</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🔍</div>
+                    <h3>SEO & Web Presence</h3>
+                    <p>Technical and content SEO that ensures your business is found when your ideal clients are
+                        actively searching. Built for local and national visibility.</p>
+                    <ul class="service-list">
+                        <li>Technical SEO audit & fix</li>
+                        <li>On-page optimisation</li>
+                        <li>Local SEO (Google Business)</li>
+                        <li>Content SEO architecture</li>
+                        <li>Website build & maintenance</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal d-2">
+                    <div class="service-icon">📊</div>
+                    <h3>Retention & Expansion Systems</h3>
+                    <p>Maximise lifetime client value through automated retargeting, upsell sequences, referral
+                        triggers, and review generation systems that run in the background.</p>
+                    <ul class="service-list">
+                        <li>Retargeting campaigns</li>
+                        <li>Post-sale upsell sequences</li>
+                        <li>Referral trigger system</li>
+                        <li>Review generation flow</li>
+                        <li>Loyalty & re-engagement</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 64px;" class="reveal">
+                <p
+                    style="font-size: 17px; color: var(--text-sub); max-width: 560px; margin: 0 auto 32px; line-height: 1.7;">
+                    All 6 service areas are deployed as one connected system. Nothing runs in isolation.</p>
+                <a href="apply.html" class="btn-primary" style="font-size: 17px; padding: 18px 36px;">Apply To Install
+                    Yours →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><img src="logo.jpeg" class="nav-logo-img" alt="BrandKings">BrandKings</div>
+                    <p>We build fully engineered client acquisition systems. Deploy Systems. Not Services.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/18dfjeHUjC/" target="_blank" title="Facebook"
+                            aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg></a>
+                        <a href="https://www.instagram.com/brandkings__?igsh=d2lkZnY1NXczZWVt" target="_blank"
+                            title="Instagram" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg></a>
+                        <a href="https://www.tiktok.com/@brandk1ngs" target="_blank" title="TikTok"
+                            aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="system.html">The System</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Started</h4>
+                    <ul>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="tel:+2349078239676">+234 907 823 9676</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BrandKings. All rights reserved.</p><span>Deploy Systems. Not Services.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
