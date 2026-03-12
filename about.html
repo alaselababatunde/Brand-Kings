@@ -1,312 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | BrandKings</title>
-    <meta name="description" content="Learn about BrandKings and our mission to build automated client acquisition systems for businesses.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="logo.jpeg" type="image/jpeg">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>About Us — BrandKings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <header>
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="logo.jpeg" alt="BrandKings Logo" class="logo-img">
-                <span class="logo-text">BrandKings</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#mission" class="nav-link">Mission</a>
-                <a href="#values" class="nav-link">Values</a>
-                <a href="#team" class="nav-link">Team</a>
-                <a href="#apply" class="nav-link cta-button">Apply To Work With Us</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="index.html" class="nav-logo">BRAND<span>KINGS</span></a>
+            <nav class="nav-links">
+                <a href="about.html" class="nav-item active">About Us</a>
+                <a href="system.html" class="nav-item">The System</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="case-studies.html" class="nav-item">Case Studies</a>
+                <a href="industries.html" class="nav-item">Industries</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:24px;">
+                <a href="tel:+2349078239676" class="contact-phone">+234 907 823 9676</a>
+                <a href="apply.html" class="btn-nav"><span>Apply Now</span></a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="min-height: 60vh;">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
+    <div class="page-header">
+        <div class="container">
+            <div class="mono-label reveal">The Agency Shift</div>
+            <h1 class="hero-headline reveal reveal-delay-1" style="font-size: 64px; margin-top:24px;">
+                Stop Buying Services.<br><em>Start Deploying Systems.</em>
+            </h1>
         </div>
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up">
-                <h1 class="hero-title">About BrandKings</h1>
-                <p class="hero-subtitle">
-                    We're not just another marketing agency. We build systems that acquire clients automatically.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#mission" class="btn-primary">Our Mission</a>
-                    <a href="#team" class="btn-secondary">Meet Our Team</a>
-                </div>
+    </div>
+
+    <section id="story">
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div class="reveal">
+                <h2 class="section-headline">We saw the agency model <br><em>breaking businesses.</em></h2>
+                <p class="body-text" style="margin-bottom: 24px;">Businesses were spending thousands on beautiful
+                    designs, ad management, and content creation, yet still struggling to predict where their next
+                    client was coming from. Why? Because they were buying fragmented services instead of unified
+                    systems.</p>
+                <p class="body-text" style="margin-bottom: 24px;">We changed the model. Instead of selling hours, we
+                    sell infrastructure. We build entire client acquisition systems tailored to specific niches—ready to
+                    activate.</p>
+                <a href="system.html" class="btn-ghost">View The Architecture</a>
+            </div>
+            <div class="glass-panel reveal reveal-delay-1">
+                <h3 style="color:var(--gold-lt); margin-bottom: 24px;">The Difference</h3>
+                <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
+                    <li style="display:flex; align-items:flex-start; gap:12px;">
+                        <span style="color:var(--gold); font-weight:bold;">×</span>
+                        <span class="body-text" style="font-size:18px;">Agencies sell time and retainers.</span>
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:12px; margin-bottom:16px;">
+                        <span style="color:var(--teal); font-weight:bold;">✓</span>
+                        <span class="body-text" style="font-size:18px; color:var(--cream);">BrandKings builds and
+                            deploys an asset you own.</span>
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:12px;">
+                        <span style="color:var(--gold); font-weight:bold;">×</span>
+                        <span class="body-text" style="font-size:18px;">Agencies require you to manage them.</span>
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:12px; margin-bottom:16px;">
+                        <span style="color:var(--teal); font-weight:bold;">✓</span>
+                        <span class="body-text" style="font-size:18px; color:var(--cream);">Our systems run autonomously
+                            on AI and automation.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="mission-section" id="mission">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Our Mission</h2>
-                <p class="section-subtitle">Transforming Businesses Through Automation</p>
+    <!-- FOOTER INJECTION PLACEHOLDER (Use same structure) -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="nav-logo" style="margin-bottom:20px;">BRAND<span>KINGS</span></a>
+                <p class="body-text" style="font-size:16px; margin-bottom:24px;">Deploy systems. Not
+                    services.<br>Activated, automated client acquisition.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/18dfjeHUjC/" target="_blank" class="social-icon">FB</a>
+                    <a href="https://www.instagram.com/brandkings__?igsh=d2lkZnY1NXczZWVt" target="_blank"
+                        class="social-icon">IG</a>
+                    <a href="https://www.tiktok.com/@brandk1ngs" target="_blank" class="social-icon">TK</a>
+                </div>
             </div>
-            
-            <div class="mission-content">
-                <div class="mission-text" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Why We Exist</h3>
-                    <p>
-                        Most businesses struggle with inconsistent marketing results. They hire agencies, run ads, create content, 
-                        but never see the predictable, scalable growth they need. We founded BrandKings to solve this problem 
-                        once and for all.
-                    </p>
-                    <p>
-                        We believe every business deserves a system that works automatically, generating qualified leads and 
-                        converting them into paying clients without constant manual intervention.
-                    </p>
-                </div>
-                
-                <div class="mission-stats" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="500">0</div>
-                        <div class="stat-label">Clients Served</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="50">0</div>
-                        <div class="stat-label">Industries Transformed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="2000">0</div>
-                        <div class="stat-label">Systems Built</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="95">0</div>
-                        <div class="stat-label">Client Satisfaction Rate</div>
-                    </div>
-                </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="about.html">About BrandKings</a></li>
+                    <li><a href="system.html">The System</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="team.html">The Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sub-Brands</h4>
+                <ul>
+                    <li><a href="foodlas/index.html">Foodlas (Food)</a></li>
+                    <li><a href="petlang/index.html">Petlang (Pets)</a></li>
+                    <li><a href="fitflux/index.html">Fitflux (Fitness)</a></li>
+                    <li><a href="industries.html">Explore Niches</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="apply.html">Apply To Work With Us</a></li>
+                    <li><a href="tel:+2349078239676">+234 907 823 9676</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values-section" id="values">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Our Core Values</h2>
-                <p class="section-subtitle">What Drives Everything We Do</p>
-            </div>
-            
-            <div class="values-grid">
-                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="value-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h4>Excellence</h4>
-                    <p>We don't do average. Every system we build is engineered to perform at the highest level.</p>
-                </div>
-                
-                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h4>Partnership</h4>
-                    <p>We become an extension of your team, working together to achieve your business goals.</p>
-                </div>
-                
-                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="value-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h4>Innovation</h4>
-                    <p>We constantly push boundaries, using the latest technology and strategies to stay ahead.</p>
-                </div>
-                
-                <div class="value-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="value-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h4>Results</h4>
-                    <p>We're obsessed with measurable outcomes. If it doesn't work, we fix it until it does.</p>
-                </div>
-                
-                <div class="value-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="value-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4>Integrity</h4>
-                    <p>We do what's right, not what's easy. Honest communication and ethical practices guide us.</p>
-                </div>
-                
-                <div class="value-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Growth</h4>
-                    <p>We're committed to continuous improvement, both for our clients and ourselves.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section" id="team">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Meet Our Leadership Team</h2>
-                <p class="section-subtitle">Visionaries Behind The Systems</p>
-            </div>
-            
-            <div class="team-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-avatar">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <h4>CEO & Founder</h4>
-                    <p>Leading the vision and strategic direction of BrandKings.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member-avatar">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h4>CTO & Systems Architect</h4>
-                    <p>Designing and implementing our cutting-edge client acquisition systems.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-avatar">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <h4>Head of Client Success</h4>
-                    <p>Ensuring every client achieves their desired results and beyond.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Journey Section -->
-    <section class="journey-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Our Journey</h2>
-                <p class="section-subtitle">From Vision To Global Impact</p>
-            </div>
-            
-            <div class="timeline" data-aos="fade-up" data-aos-delay="100">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2018</h4>
-                        <p>BrandKings founded with a mission to revolutionize client acquisition</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2019</h4>
-                        <p>First 100 client systems deployed, proving our methodology</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2020</h4>
-                        <p>Expanded to international markets during global digital transformation</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2021</h4>
-                        <p>Launched specialized niche systems for different industries</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2022</h4>
-                        <p>Achieved 95% client satisfaction rate and 500+ success stories</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>2023</h4>
-                        <p>Introduced AI-powered automation and predictive analytics</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="apply">
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up">
-                <h2>Ready To Transform Your Business?</h2>
-                <p>Join hundreds of businesses that have already automated their client acquisition.</p>
-                <div class="cta-buttons">
-                    <a href="index.html#apply" class="btn-primary">Apply To Work With Us</a>
-                    <a href="index.html#system" class="btn-secondary">See Our System</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.jpeg" alt="BrandKings Logo" class="footer-logo-img">
-                    <span class="footer-logo-text">BrandKings</span>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="#mission">Mission</a>
-                    <a href="#values">Values</a>
-                    <a href="#team">Team</a>
-                    <a href="#apply">Apply</a>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2024 BrandKings. All rights reserved.</p>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <div class="footer-tagline">Global Growth Agency Infrastructure</div>
+            <div class="footer-note">© 2026 BrandKings · All Rights Reserved</div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

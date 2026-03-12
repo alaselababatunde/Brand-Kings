@@ -3,631 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrandKings | Client Acquisition Systems</title>
-    <meta name="description" content="We Build Systems That Acquire Clients For You. BrandKings designs and installs automated client acquisition systems that consistently generate new clients for businesses.">
+    <title>BrandKings — Full-Stack Brand Growth & Performance Marketing</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
-    <link rel="icon" href="logo.jpeg" type="image/jpeg">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
+
+    <!-- Global Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scarcity Banner -->
+    <div class="top-banner">
+        <p>⚡ &nbsp; <span>3 SPOTS OPEN THIS MONTH FOR YOUR NICHE</span> — Your Competitor Is Probably Already Looking · The Businesses That Hesitate Are The Ones We Never Hear From Again &nbsp; ⚡</p>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <header>
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="logo.jpeg" alt="BrandKings Logo" class="logo-img">
-                <span class="logo-text">BrandKings</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#system" class="nav-link">System</a>
-                <a href="#case-studies" class="nav-link">Case Studies</a>
-                <a href="#industries" class="nav-link">Industries</a>
-                <a href="#apply" class="nav-link cta-button">Apply To Work With Us</a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="index.html" class="nav-logo">BRAND<span>KINGS</span></a>
+            <nav class="nav-links">
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="system.html" class="nav-item">The System</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="case-studies.html" class="nav-item">Case Studies</a>
+                <a href="industries.html" class="nav-item">Industries</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:24px;">
+                <a href="tel:+2349078239676" class="contact-phone">+234 907 823 9676</a>
+                <a href="apply.html" class="btn-nav"><span>Apply Now</span></a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up">
-                <h1 class="hero-title">We Build Systems That Acquire Clients For You</h1>
-                <p class="hero-subtitle">
-                    BrandKings builds automated client acquisition systems that consistently generate new clients for businesses.
-                </p>
-                <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="7">0</div>
-                        <div class="stat-label">Specialists Per Client System</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="5">0</div>
-                        <div class="stat-label">Phases Built Before You Pay</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="0">0</div>
-                        <div class="stat-label">Hours Required To Run The System</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="12">0</div>
-                        <div class="stat-label">Month Niche Exclusivity</div>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#apply" class="btn-primary">Apply To Work With Us</a>
-                    <a href="#system" class="btn-secondary">See How The System Works</a>
-                </div>
+    <!-- HERO SECTION -->
+    <section id="hero" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 160px 60px 80px; text-align: center;">
+        <div style="position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(117,17,213,0.25) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 20% 60%, rgba(201,150,12,0.08) 0%, transparent 60%), linear-gradient(160deg, #1A0033 0%, #31055C 50%, #1A0033 100%);"></div>
+        <div style="position: absolute; inset: 0; z-index: 0; opacity: 0.04; background-image: linear-gradient(var(--gold) 1px, transparent 1px), linear-gradient(90deg, var(--gold) 1px, transparent 1px); background-size: 80px 80px;"></div>
+        
+        <div class="container">
+            <div class="eyebrow" style="margin-bottom: 32px; display: flex; justify-content: center; align-items: center; gap: 16px;">
+                <span style="width: 40px; height: 1px; background: var(--gold-dim);"></span>
+                Your Business Needs A Client Acquisition System · Not Another Agency · We Build & Install It
+                <span style="width: 40px; height: 1px; background: var(--gold-dim);"></span>
             </div>
-            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
-                <div class="analytics-dashboard">
-                    <div class="dashboard-header">
-                        <div class="metric-indicator active">System Active</div>
-                        <div class="metric-indicator">Auto-Running</div>
-                    </div>
-                    <div class="dashboard-content">
-                        <div class="chart-placeholder">
-                            <div class="growth-line"></div>
-                        </div>
-                        <div class="metrics-grid">
-                            <div class="metric-item">
-                                <span class="metric-label">Leads Generated</span>
-                                <span class="metric-value">1,234</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Conversion Rate</span>
-                                <span class="metric-value">23.4%</span>
-                            </div>
-                        </div>
-                    </div>
+            
+            <h1 class="hero-headline">
+                We Build Systems That<br>
+                <em>Acquire Clients For You.</em><br>
+                <strong class="gradient-text">Activated. Automated. Running.</strong>
+            </h1>
+            
+            <p class="sub-headline" style="max-width: 620px; margin: 36px auto 52px;">
+                BrandKings is a full-stack brand growth & performance marketing agency. We build and install client acquisition systems, activated for your specific niche, that run without you.
+            </p>
+            
+            <div style="display: flex; gap: 16px; justify-content: center; align-items: center;">
+                <a href="apply.html" class="btn-primary">Apply to Work With Us</a>
+                <a href="how-it-works.html" class="btn-ghost">See How It Works</a>
+            </div>
+        </div>
+        
+        <div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px;">
+            <div style="width: 1px; height: 48px; background: linear-gradient(to bottom, var(--gold-dim), transparent); animation: scrollPulse 2s ease infinite;"></div>
+            <span class="mono-label" style="color:var(--gold-dim); font-size:10px;">Scroll</span>
+        </div>
+    </section>
+
+    <!-- BRAND STATEMENT BANNER -->
+    <div style="border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:rgba(17,8,32,0.8); padding:28px 60px; position:relative; z-index:15;">
+        <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:40px;">
+            <div style="display:flex; align-items:center; gap:20px;">
+                <span class="mono-label">What We Are</span>
+                <span style="width:1px; height:32px; background:var(--border);"></span>
+                <span style="font-family:'Cormorant Garamond', serif; font-size:18px; font-style:italic;">Full-stack brand growth & performance marketing agency</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:20px;">
+                <span style="width:1px; height:32px; background:var(--border);"></span>
+                <span style="font-family:'Cormorant Garamond', serif; font-size:18px; color:var(--mist); font-style:italic;">We build & install client acquisition systems, <span style="color:var(--gold-lt);">activated for your niche</span>, that run without you</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div style="background:var(--purple); border-bottom:1px solid var(--border); position:relative; z-index:15;">
+        <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(5, 1fr);">
+            <div style="padding:48px 24px; text-align:center; border-right:1px solid var(--border);">
+                <div style="font-family:'Cormorant Garamond', serif; font-size:56px; font-weight:300; color:var(--gold-lt); margin-bottom:12px; line-height:1;">7</div>
+                <div style="font-family:'Syne', sans-serif; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Specialists</div>
+                <div style="font-family:'Cormorant Garamond', serif; font-size:15px; color:var(--mist); font-style:italic;">Per client system</div>
+            </div>
+            <div style="padding:48px 24px; text-align:center; border-right:1px solid var(--border);">
+                <div style="font-family:'Cormorant Garamond', serif; font-size:56px; font-weight:300; color:var(--gold-lt); margin-bottom:12px; line-height:1;">5</div>
+                <div style="font-family:'Syne', sans-serif; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Phases Built</div>
+                <div style="font-family:'Cormorant Garamond', serif; font-size:15px; color:var(--mist); font-style:italic;">Before payment</div>
+            </div>
+            <div style="padding:48px 24px; text-align:center; border-right:1px solid var(--border);">
+                <div style="font-family:'Cormorant Garamond', serif; font-size:56px; font-weight:300; color:var(--gold-lt); margin-bottom:12px; line-height:1;">0</div>
+                <div style="font-family:'Syne', sans-serif; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Hours Needed</div>
+                <div style="font-family:'Cormorant Garamond', serif; font-size:15px; color:var(--mist); font-style:italic;">To run the system</div>
+            </div>
+            <div style="padding:48px 24px; text-align:center;">
+                <div style="font-family:'Cormorant Garamond', serif; font-size:56px; font-weight:300; color:var(--gold-lt); margin-bottom:12px; line-height:1;">Day 1</div>
+                <div style="font-family:'Syne', sans-serif; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Deployment</div>
+                <div style="font-family:'Cormorant Garamond', serif; font-size:15px; color:var(--mist); font-style:italic;">Live upon signing</div>
+            </div>
+            <div style="padding:48px 24px; text-align:center; border-left:1px solid var(--border); background:rgba(201,150,12,0.06);">
+                <div style="font-family:'Cormorant Garamond', serif; font-size:56px; font-weight:300; color:var(--gold-lt); margin-bottom:12px; line-height:1;">12</div>
+                <div style="font-family:'Syne', sans-serif; font-size:13px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Month Exclusivity</div>
+                <div style="font-family:'Cormorant Garamond', serif; font-size:15px; color:var(--mist); font-style:italic;">Act before markets filled</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE PROBLEM -->
+    <section id="problem" style="background: linear-gradient(to bottom, #1A0033, #220044);">
+        <div class="container">
+            <div class="mono-label reveal" style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                The Problem <span style="flex:1; max-width:60px; height:1px; background:var(--gold-dim);"></span>
+            </div>
+            <h3 class="reveal reveal-delay-1" style="max-width: 780px; margin-bottom: 64px;">
+                Most businesses aren't failing because of effort. They're failing because they're <em>buying services</em> instead of building systems.
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border);">
+                <div class="glass-panel reveal reveal-delay-1">
+                    <div class="mono-label" style="color:var(--gold-dim); margin-bottom:16px;">01</div>
+                    <p class="body-text"><strong>You hire a designer.</strong> They build something beautiful. But it doesn't convert because there's no funnel behind it. Money spent. No system built.</p>
+                </div>
+                <div class="glass-panel reveal reveal-delay-2" style="background:#220044; border:none; border-radius:0;">
+                    <div class="mono-label" style="color:var(--gold-dim); margin-bottom:16px;">02</div>
+                    <p class="body-text"><strong>You run ads.</strong> Leads come in. Nobody follows up fast enough. The lead goes cold. You blame the ads. The real problem is no automation behind them.</p>
+                </div>
+                <div class="glass-panel reveal reveal-delay-3">
+                    <div class="mono-label" style="color:var(--gold-dim); margin-bottom:16px;">03</div>
+                    <p class="body-text"><strong>You post content daily.</strong> Engagement is okay. But none of it is engineered to move someone from scroll to sale. No funnel placement.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Problem Section -->
-    <section class="problem-section" id="about">
+    <!-- THE SHIFT (The BrandKings Way) -->
+    <section id="shift" style="background: #220044; border-top: 1px solid var(--border);">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">The Problem</h2>
-                <p class="section-subtitle">Why Most Businesses Fail At Marketing</p>
+            <div class="mono-label reveal" style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+                The BrandKings Way <span style="flex:1; max-width:60px; height:1px; background:var(--gold-dim);"></span>
+            </div>
+            <h2 class="section-headline reveal reveal-delay-1">
+                We don't sell you time.<br><em>We deploy systems.</em>
+            </h2>
+            <p class="body-text reveal reveal-delay-2" style="max-width: 640px; margin-bottom: 80px;">
+                Before you sign a single contract, we've already pre-built your entire growth infrastructure — funnels, automations, content engines, expansion systems. When you activate, we press play.
+            </p>
+            
+            <!-- Quick overview of System, full detail on system.html -->
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 24px;" class="reveal reveal-delay-3">
+                <div style="background:var(--purple); padding:32px 24px; position:relative; overflow:hidden;">
+                    <span style="font-family:'DM Mono',monospace; font-size:28px; font-weight:300; color:var(--gold); display:block; margin-bottom:16px;">01</span>
+                    <div style="font-family:'Syne',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; color:var(--cream); text-transform:uppercase; margin-bottom:10px;">Traffic</div>
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--mist); line-height:1.5;">Content archetypes, ad infrastructure & lead magnets.</div>
+                </div>
+                <div style="background:var(--purple); padding:32px 24px; position:relative; overflow:hidden;">
+                    <span style="font-family:'DM Mono',monospace; font-size:28px; font-weight:300; color:var(--gold); display:block; margin-bottom:16px;">02</span>
+                    <div style="font-family:'Syne',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; color:var(--cream); text-transform:uppercase; margin-bottom:10px;">Lead Capture</div>
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--mist); line-height:1.5;">Landing pages, opt-in systems & pipelines.</div>
+                </div>
+                <!-- ... Just highlighting 3 phases to tease the full system page -->
+                <div style="background:var(--purple); padding:32px 24px; position:relative; overflow:hidden;">
+                    <span style="font-family:'DM Mono',monospace; font-size:28px; font-weight:300; color:var(--gold); display:block; margin-bottom:16px;">03</span>
+                    <div style="font-family:'Syne',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; color:var(--cream); text-transform:uppercase; margin-bottom:10px;">Conversion</div>
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--mist); line-height:1.5;">Booking systems & follow-up sequences.</div>
+                </div>
+                <div style="background:var(--purple); padding:32px 24px; position:relative; overflow:hidden;">
+                    <span style="font-family:'DM Mono',monospace; font-size:28px; font-weight:300; color:var(--gold); display:block; margin-bottom:16px;">04</span>
+                    <div style="font-family:'Syne',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; color:var(--cream); text-transform:uppercase; margin-bottom:10px;">Expansion</div>
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--mist); line-height:1.5;">Retargeting & email remarketing.</div>
+                </div>
+                <div style="background:var(--purple); padding:32px 24px; position:relative; overflow:hidden;">
+                    <span style="font-family:'DM Mono',monospace; font-size:28px; font-weight:300; color:var(--gold); display:block; margin-bottom:16px;">05</span>
+                    <div style="font-family:'Syne',sans-serif; font-size:13px; font-weight:700; letter-spacing:1px; color:var(--cream); text-transform:uppercase; margin-bottom:10px;">Automation</div>
+                    <div style="font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--mist); line-height:1.5;">The AI engine that runs everything 24/7.</div>
+                </div>
             </div>
             
-            <div class="problem-grid">
-                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Hire a Designer</h3>
-                    <p>Beautiful website created, but no conversion system to turn visitors into clients.</p>
-                    <div class="card-result">❌ No Results</div>
-                </div>
-                
-                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-icon">
-                        <i class="fas fa-ad"></i>
-                    </div>
-                    <h3>Run Ads</h3>
-                    <p>Leads come in, but no follow-up system to nurture and convert them.</p>
-                    <div class="card-result">❌ No Results</div>
-                </div>
-                
-                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-icon">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <h3>Post Content Daily</h3>
-                    <p>Engagement grows, but no engineered sales path to monetize the audience.</p>
-                    <div class="card-result">❌ No Results</div>
-                </div>
+            <a href="system.html" class="btn-ghost reveal reveal-delay-4">Explore The Complete System Diagram</a>
+        </div>
+    </section>
+
+    <!-- NICHES TEASER -->
+    <section id="niches" style="background: linear-gradient(135deg, #31055C 0%, #220044 100%); border-top: 1px solid var(--border);">
+        <div class="container text-center" style="text-align:center;">
+             <div class="mono-label reveal" style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:20px;">
+                <span style="flex:1; max-width:60px; height:1px; background:var(--gold-dim);"></span> Hyper-Personalised <span style="flex:1; max-width:60px; height:1px; background:var(--gold-dim);"></span>
             </div>
+            <h2 class="section-headline reveal reveal-delay-1">Niche Implementations</h2>
+            <p class="body-text reveal reveal-delay-2" style="max-width: 600px; margin: 0 auto 60px;">Every client gets a system activated for their specific niche market. Traffic to bookings, tailored purely for your audience.</p>
             
-            <div class="solution-highlight" data-aos="fade-up" data-aos-delay="400">
-                <div class="solution-content">
-                    <h3>Your Business Needs A Client Acquisition System — Not Another Agency</h3>
-                    <p>BrandKings solves this by building one integrated client acquisition system that handles everything automatically.</p>
-                    <div class="solution-benefits">
-                        <span class="benefit-tag">Activated</span>
-                        <span class="benefit-tag">Automated</span>
-                        <span class="benefit-tag">Running</span>
-                    </div>
-                </div>
+            <div style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap;" class="reveal reveal-delay-3">
+                <a href="foodlas/index.html" class="glass-panel" style="text-decoration:none; display:block; width:30%;">
+                    <h3 style="color:var(--gold-lt); margin-bottom:8px; font-family:'Syne',sans-serif; font-weight:700;">Foodlas</h3>
+                    <p class="body-text" style="font-size:16px;">For Food, Restaurant & Catering businesses.</p>
+                </a>
+                <a href="petlang/index.html" class="glass-panel" style="text-decoration:none; display:block; width:30%;">
+                    <h3 style="color:var(--gold-lt); margin-bottom:8px; font-family:'Syne',sans-serif; font-weight:700;">Petlang</h3>
+                    <p class="body-text" style="font-size:16px;">For Pet Services, Trainers & Groomers.</p>
+                </a>
+                <a href="fitflux/index.html" class="glass-panel" style="text-decoration:none; display:block; width:30%;">
+                    <h3 style="color:var(--gold-lt); margin-bottom:8px; font-family:'Syne',sans-serif; font-weight:700;">Fitflux</h3>
+                    <p class="body-text" style="font-size:16px;">For Fitness Coaches & Wellness Trainers.</p>
+                </a>
+            </div>
+            <div style="margin-top:40px;" class="reveal reveal-delay-4">
+                <a href="industries.html" class="btn-ghost">View All Industries</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA SECTION -->
+    <section id="cta" style="background: var(--ink); text-align:center; padding: 140px 0;">
+        <div class="container">
+            <h2 class="section-headline reveal">Ready to drop services <br><em>and deploy an automated system?</em></h2>
+            <p class="body-text reveal reveal-delay-1" style="max-width:540px; margin:24px auto 48px;">Apply today. If you qualify, we will build a custom value sample for your specific business before you ever commit.</p>
+            <div class="reveal reveal-delay-2">
+                <a href="apply.html" class="btn-primary">Apply Now For Your System</a>
             </div>
         </div>
     </section>
 
-    <!-- The BrandKings System -->
-    <section class="system-section" id="system">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">The BrandKings System</h2>
-                <p class="section-subtitle">One Integrated System That Handles Everything</p>
-            </div>
-            
-            <div class="system-diagram" data-aos="fade-up" data-aos-delay="100">
-                <div class="system-flow">
-                    <div class="flow-step">
-                        <div class="step-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4>Traffic</h4>
-                        <p>Generate targeted traffic to your offers</p>
-                    </div>
-                    
-                    <div class="flow-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    
-                    <div class="flow-step">
-                        <div class="step-icon">
-                            <i class="fas fa-capture"></i>
-                        </div>
-                        <h4>Lead Capture</h4>
-                        <p>Capture leads with high-converting funnels</p>
-                    </div>
-                    
-                    <div class="flow-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    
-                    <div class="flow-step">
-                        <div class="step-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h4>Conversion</h4>
-                        <p>Convert leads into paying clients</p>
-                    </div>
-                    
-                    <div class="flow-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    
-                    <div class="flow-step">
-                        <div class="step-icon">
-                            <i class="fas fa-expand"></i>
-                        </div>
-                        <h4>Expansion</h4>
-                        <p>Expand reach and scale the system</p>
-                    </div>
-                    
-                    <div class="flow-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    
-                    <div class="flow-step">
-                        <div class="step-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h4>Automation</h4>
-                        <p>Full automation with zero manual effort</p>
-                    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="nav-logo" style="margin-bottom:20px;">BRAND<span>KINGS</span></a>
+                <p class="body-text" style="font-size:16px; margin-bottom:24px;">Deploy systems. Not services.<br>Activated, automated client acquisition.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/18dfjeHUjC/" target="_blank" class="social-icon">FB</a>
+                    <a href="https://www.instagram.com/brandkings__?igsh=d2lkZnY1NXczZWVt" target="_blank" class="social-icon">IG</a>
+                    <a href="https://www.tiktok.com/@brandk1ngs" target="_blank" class="social-icon">TK</a>
                 </div>
             </div>
-            
-            <div class="system-features" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-card">
-                    <h4>Complete System Design</h4>
-                    <p>We design and build your entire client acquisition system from scratch.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>7 Specialist Team</h4>
-                    <p>Each system is built by a dedicated team of 7 specialists.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>5 Phase Development</h4>
-                    <p>We build in 5 phases before you pay anything.</p>
-                </div>
-                <div class="feature-card">
-                    <h4>Day 1 Deployment</h4>
-                    <p>Your system goes live and starts generating results immediately.</p>
-                </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="about.html">About BrandKings</a></li>
+                    <li><a href="system.html">The System</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="team.html">The Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sub-Brands</h4>
+                <ul>
+                    <li><a href="foodlas/index.html">Foodlas (Food)</a></li>
+                    <li><a href="petlang/index.html">Petlang (Pets)</a></li>
+                    <li><a href="fitflux/index.html">Fitflux (Fitness)</a></li>
+                    <li><a href="industries.html">Explore Niches</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="apply.html">Apply To Work With Us</a></li>
+                    <li><a href="tel:+2349078239676">+234 907 823 9676</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">The 7 Specialists Behind Every System</h2>
-                <p class="section-subtitle">Your Dedicated Team</p>
-            </div>
-            
-            <div class="team-grid">
-                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-avatar">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h4>Funnel Strategist</h4>
-                    <p>Designs the complete funnel strategy and customer journey.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member-avatar">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h4>Graphic Designer</h4>
-                    <p>Creates stunning visuals and brand assets for your system.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-avatar">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h4>Video Editor</h4>
-                    <p>Produces engaging video content for your marketing.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
-                    <div class="member-avatar">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <h4>Social Media Manager</h4>
-                    <p>Manages your social presence and content strategy.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="500">
-                    <div class="member-avatar">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h4>SEO Specialist</h4>
-                    <p>Optimizes your system for search engine visibility.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="600">
-                    <div class="member-avatar">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h4>Web Developer</h4>
-                    <p>Builds and maintains your technical infrastructure.</p>
-                </div>
-                
-                <div class="team-member" data-aos="fade-up" data-aos-delay="700">
-                    <div class="member-avatar">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h4>AI Engineer</h4>
-                    <p>Implements AI automation and optimization.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="case-studies-section" id="case-studies">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Case Studies</h2>
-                <p class="section-subtitle">Real Results From Our Systems</p>
-            </div>
-            
-            <div class="case-studies-grid">
-                <div class="case-study-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                        <div class="case-study-info">
-                            <h4>Fitness Coach (Lagos)</h4>
-                            <p>Before BrandKings</p>
-                        </div>
-                    </div>
-                    <div class="case-study-results">
-                        <div class="result-item">
-                            <span class="result-label">Organic Reach</span>
-                            <span class="result-value positive">4.2×</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Monthly Profile Visits</span>
-                            <span class="result-value positive">12,000</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Time Period</span>
-                            <span class="result-value">90 Days</span>
-                        </div>
-                    </div>
-                    <div class="case-study-graph">
-                        <div class="graph-line"></div>
-                    </div>
-                </div>
-                
-                <div class="case-study-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-paw"></i>
-                        </div>
-                        <div class="case-study-info">
-                            <h4>Dog Trainer</h4>
-                            <p>Before BrandKings</p>
-                        </div>
-                    </div>
-                    <div class="case-study-results">
-                        <div class="result-item">
-                            <span class="result-label">Opt-in Rate</span>
-                            <span class="result-value positive">68%</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Leads Generated</span>
-                            <span class="result-value positive">3×</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Time Period</span>
-                            <span class="result-value">30 Days</span>
-                        </div>
-                    </div>
-                    <div class="case-study-graph">
-                        <div class="graph-line"></div>
-                    </div>
-                </div>
-                
-                <div class="case-study-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-bug"></i>
-                        </div>
-                        <div class="case-study-info">
-                            <h4>Pest Control Business</h4>
-                            <p>Before BrandKings</p>
-                        </div>
-                    </div>
-                    <div class="case-study-results">
-                        <div class="result-item">
-                            <span class="result-label">Close Rate</span>
-                            <span class="result-value positive">52%</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Revenue Growth</span>
-                            <span class="result-value positive">2.8×</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Time Period</span>
-                            <span class="result-value">6 Months</span>
-                        </div>
-                    </div>
-                    <div class="case-study-graph">
-                        <div class="graph-line"></div>
-                    </div>
-                </div>
-                
-                <div class="case-study-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="case-study-info">
-                            <h4>Cloud Kitchen</h4>
-                            <p>Before BrandKings</p>
-                        </div>
-                    </div>
-                    <div class="case-study-results">
-                        <div class="result-item">
-                            <span class="result-label">Repeat Orders</span>
-                            <span class="result-value positive">5×</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Monthly Revenue</span>
-                            <span class="result-value positive">₦2.1M</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-label">Time Period</span>
-                            <span class="result-value">4 Months</span>
-                        </div>
-                    </div>
-                    <div class="case-study-graph">
-                        <div class="graph-line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industries Section -->
-    <section class="industries-section" id="industries">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Niche Systems</h2>
-                <p class="section-subtitle">Specialized Systems For Your Industry</p>
-            </div>
-            
-            <div class="industries-grid">
-                <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="industry-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Foodlas</h3>
-                    <p>Client acquisition systems for restaurants and food brands.</p>
-                    <ul class="industry-features">
-                        <li>Food delivery optimization</li>
-                        <li>Restaurant marketing automation</li>
-                        <li>Customer retention systems</li>
-                    </ul>
-                </div>
-                
-                <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="industry-icon">
-                        <i class="fas fa-paw"></i>
-                    </div>
-                    <h3>Petlang</h3>
-                    <p>Client acquisition systems for pet trainers and pet businesses.</p>
-                    <ul class="industry-features">
-                        <li>Pet service marketing</li>
-                        <li>Training program promotion</li>
-                        <li>Pet owner engagement</li>
-                    </ul>
-                </div>
-                
-                <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="industry-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3>Fitflux</h3>
-                    <p>Client acquisition systems for fitness coaches and wellness brands.</p>
-                    <ul class="industry-features">
-                        <li>Fitness program marketing</li>
-                        <li>Client onboarding automation</li>
-                        <li>Membership retention</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Application Section -->
-    <section class="application-section" id="apply">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Apply To Work With Us</h2>
-                <p class="section-subtitle">Ready To Build Your Client Acquisition System?</p>
-            </div>
-            
-            <div class="application-form-container" data-aos="fade-up" data-aos-delay="100">
-                <form class="application-form" id="applicationForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="businessName">Business Name</label>
-                        <input type="text" id="businessName" name="businessName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone / WhatsApp</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="industry">Industry</label>
-                        <select id="industry" name="industry" required>
-                            <option value="">Select your industry</option>
-                            <option value="fitness">Fitness & Wellness</option>
-                            <option value="food">Food & Restaurant</option>
-                            <option value="pet">Pet Services</option>
-                            <option value="ecommerce">E-commerce</option>
-                            <option value="consulting">Consulting</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="challenge">Biggest Growth Challenge</label>
-                        <textarea id="challenge" name="challenge" rows="4" required></textarea>
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button type="submit" class="btn-primary">Submit Application</button>
-                        <p class="form-note">Applications are reviewed within 48 hours. Selected businesses receive a custom growth sample.</p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-subtitle">Get In Touch</p>
-            </div>
-            
-            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+2349078239676</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>info@brandkings.com</span>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/18dfjeHUjC/" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/brandk1ngs__?igsh=d2lkZnY1NXczZWVt" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@brandk1ngs?_r=1&_d=f1ibl5i57cka98&sec_uid=MS4wLjABAAAArS_WTy5sDZB269KPOWSeBANhlsuLiCOvWRaXoQHjjC1d-Afp1u3nHJHLvJDtW8dj&share_author_id=7464619764453164038&sharer_language=en&source=h5_m&u_code=eie7a1d8e7ml32×tamp=1772965015&user_id=7464619764453164038&sec_user_id=MS4wLjABAAAArS_WTy5sDZB269KPOWSeBANhlsuLiCOvWRaXoQHjjC1d-Afp1u3nHJHLvJDtW8dj&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7613360810791274261&share_link_id=ca973f85-4665-4ffb-a93c-86bfca65a9e7&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1" target="_blank">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.jpeg" alt="BrandKings Logo" class="footer-logo-img">
-                    <span class="footer-logo-text">BrandKings</span>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#system">System</a>
-                    <a href="#case-studies">Case Studies</a>
-                    <a href="#industries">Industries</a>
-                    <a href="#apply">Apply</a>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2024 BrandKings. All rights reserved.</p>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <div class="footer-tagline">Global Growth Agency Infrastructure</div>
+            <div class="footer-note">© 2026 BrandKings · All Rights Reserved</div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
 </body>
 </html>

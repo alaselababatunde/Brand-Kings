@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply For Deployment — BrandKings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">BRAND<span>KINGS</span></a>
+            <nav class="nav-links">
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="system.html" class="nav-item">The System</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="case-studies.html" class="nav-item">Case Studies</a>
+                <a href="industries.html" class="nav-item">Industries</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:24px;">
+                <a href="tel:+2349078239676" class="contact-phone">+234 907 823 9676</a>
+                <a href="apply.html" class="btn-nav active"><span>Apply Now</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header"
+        style="background: radial-gradient(ellipse at 50% 100%, rgba(201,150,12,0.1) 0%, transparent 60%);">
+        <div class="container">
+            <div class="mono-label reveal">Qualification</div>
+            <h1 class="hero-headline reveal reveal-delay-1" style="font-size: 64px; margin-top:24px;">
+                Ready to stop buying<br>
+                <em>services</em> <strong>and deploy a system?</strong>
+            </h1>
+            <p class="sub-headline reveal reveal-delay-2" style="max-width:600px; margin:24px auto 0;">We review every
+                application personally. If you qualify, you'll receive a custom value sample—built specifically for your
+                business—before you commit to anything.</p>
+        </div>
+    </div>
+
+    <section id="application" style="background:#1A0033;">
+        <div class="container" style="max-width:800px;">
+
+            <form class="glass-panel reveal" id="applyForm" onsubmit="handleApplicationSubmit(event)">
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="First & Last Name" required>
+                    </div>
+                    <div class="form-field">
+                        <label>Business Name</label>
+                        <input type="text" placeholder="Your Business" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Note: The prompt requested no email, but the source HTML had Email Address. 
+                         I will modify the application form to strictly follow instructions: Phone only, no email. -->
+                    <div class="form-field" style="grid-column: span 2;">
+                        <label>Phone / WhatsApp</label>
+                        <input type="tel" placeholder="+234 000 000 0000" required>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label>Your Industry / Niche</label>
+                    <select required>
+                        <option value="" disabled selected>Select your industry</option>
+                        <option>Food & Restaurant Business</option>
+                        <option>Pet Services & Dog Training</option>
+                        <option>Fitness & Personal Coaching</option>
+                        <option>Pest Control & Home Services</option>
+                        <option>Health & Wellness</option>
+                        <option>Real Estate</option>
+                        <option>E-commerce</option>
+                        <option>Other Local Service Business</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label>What's your biggest growth challenge right now?</label>
+                    <textarea
+                        placeholder="Tell us what's not working — be specific. The more honest you are, the better we can help."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary"
+                    style="width:100%; justify-content:center; margin-top:16px;">Submit Application</button>
+                <div
+                    style="text-align:center; margin-top:16px; font-family:'DM Mono',monospace; font-size:10px; color:var(--mist); text-transform:uppercase; letter-spacing:1px;">
+                    We review applications within 48 hours · No spam · Ever</div>
+
+            </form>
+
+            <div id="formSuccess" class="glass-panel"
+                style="display:none; text-align:center; padding: 80px 40px; border-color:var(--gold);">
+                <div style="font-size:48px; margin-bottom:24px;">✓</div>
+                <h3 style="color:var(--gold-lt); margin-bottom:16px;">Application Received</h3>
+                <p class="body-text">Our strategists are reviewing your submission. We will reach out via Phone/WhatsApp
+                    within 48 hours if you qualify for the custom value sample.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="nav-logo" style="margin-bottom:20px;">BRAND<span>KINGS</span></a>
+                <p class="body-text" style="font-size:16px; margin-bottom:24px;">Deploy systems. Not
+                    services.<br>Activated, automated client acquisition.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/18dfjeHUjC/" target="_blank" class="social-icon">FB</a>
+                    <a href="https://www.instagram.com/brandkings__?igsh=d2lkZnY1NXczZWVt" target="_blank"
+                        class="social-icon">IG</a>
+                    <a href="https://www.tiktok.com/@brandk1ngs" target="_blank" class="social-icon">TK</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="about.html">About BrandKings</a></li>
+                    <li><a href="system.html">The System</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="team.html">The Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sub-Brands</h4>
+                <ul>
+                    <li><a href="foodlas/index.html">Foodlas (Food)</a></li>
+                    <li><a href="petlang/index.html">Petlang (Pets)</a></li>
+                    <li><a href="fitflux/index.html">Fitflux (Fitness)</a></li>
+                    <li><a href="industries.html">Explore Niches</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="apply.html">Apply To Work With Us</a></li>
+                    <li><a href="tel:+2349078239676">+234 907 823 9676</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-tagline">Global Growth Agency Infrastructure</div>
+            <div class="footer-note">© 2026 BrandKings · All Rights Reserved</div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

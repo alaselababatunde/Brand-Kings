@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — BrandKings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        .contact-card {
+            background: rgba(49, 5, 92, 0.3);
+            border: 1px solid var(--border);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .contact-number {
+            font-family: 'DM Mono', monospace;
+            font-size: 32px;
+            color: var(--gold-lt);
+            text-decoration: none;
+            display: inline-block;
+            margin: 24px 0;
+            transition: color 0.3s ease;
+        }
+
+        .contact-number:hover {
+            color: var(--cream);
+        }
+
+        .social-large {
+            display: inline-flex;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .social-large a {
+            font-family: 'Syne', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--cream);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .social-large a:hover {
+            border-color: var(--gold);
+            color: var(--gold-lt);
+            background: rgba(201, 150, 12, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">BRAND<span>KINGS</span></a>
+            <nav class="nav-links">
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="system.html" class="nav-item">The System</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="case-studies.html" class="nav-item">Case Studies</a>
+                <a href="industries.html" class="nav-item">Industries</a>
+            </nav>
+            <div style="display:flex; align-items:center; gap:24px;">
+                <a href="tel:+2349078239676" class="contact-phone">+234 907 823 9676</a>
+                <a href="apply.html" class="btn-nav"><span>Apply Now</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="mono-label reveal">Direct Access</div>
+            <h1 class="hero-headline reveal reveal-delay-1" style="font-size: 64px; margin-top:24px;">
+                Headquarters.
+            </h1>
+        </div>
+    </div>
+
+    <section id="contact-info" style="background:#220044; min-height: 50vh;">
+        <div class="container" style="max-width:800px;">
+
+            <div class="contact-card reveal">
+                <div class="mono-label" style="color:var(--mist); margin-bottom:16px;">Direct Line & WhatsApp</div>
+                <h3 style="margin-bottom:8px;">Speak with a Strategist</h3>
+                <p class="body-text">We actively monitor text and calls for partner qualification.</p>
+                <a href="tel:+2349078239676" class="contact-number">+234 907 823 9676</a>
+
+                <div style="width:100%; height:1px; background:var(--border); margin: 40px 0;"></div>
+
+                <div class="mono-label" style="color:var(--mist); margin-bottom:16px;">Network</div>
+                <h3 style="margin-bottom:8px;">Follow the Infrastructure</h3>
+                <div class="social-large">
+                    <a href="https://www.facebook.com/share/18dfjeHUjC/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/brandkings__?igsh=d2lkZnY1NXczZWVt" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@brandk1ngs" target="_blank">TikTok</a>
+                </div>
+            </div>
+
+            <div style="text-align:center; padding-top:60px;" class="reveal">
+                <p class="body-text" style="font-style:italic;">Looking to become a client?</p>
+                <a href="apply.html" class="btn-ghost" style="margin-top:16px;">Proceed to Application Process</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="nav-logo" style="margin-bottom:20px;">BRAND<span>KINGS</span></a>
+                <p class="body-text" style="font-size:16px; margin-bottom:24px;">Deploy systems. Not
+                    services.<br>Activated, automated client acquisition.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/18dfjeHUjC/" target="_blank" class="social-icon">FB</a>
+                    <a href="https://www.instagram.com/brandkings__?igsh=d2lkZnY1NXczZWVt" target="_blank"
+                        class="social-icon">IG</a>
+                    <a href="https://www.tiktok.com/@brandk1ngs" target="_blank" class="social-icon">TK</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="about.html">About BrandKings</a></li>
+                    <li><a href="system.html">The System</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="team.html">The Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sub-Brands</h4>
+                <ul>
+                    <li><a href="foodlas/index.html">Foodlas (Food)</a></li>
+                    <li><a href="petlang/index.html">Petlang (Pets)</a></li>
+                    <li><a href="fitflux/index.html">Fitflux (Fitness)</a></li>
+                    <li><a href="industries.html">Explore Niches</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="apply.html">Apply To Work With Us</a></li>
+                    <li><a href="tel:+2349078239676">+234 907 823 9676</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-tagline">Global Growth Agency Infrastructure</div>
+            <div class="footer-note">© 2026 BrandKings · All Rights Reserved</div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
