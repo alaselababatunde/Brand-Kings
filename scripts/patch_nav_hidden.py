@@ -23,6 +23,7 @@ def get_nav_html(is_subsite=False):
         <li><a href="{base_path}case-studies.html">Case Studies</a></li>
         <li><a href="{base_path}industries.html">Industries</a></li>
         <li><a href="{base_path}contact.html">Contact</a></li>
+        <li><a href="mailto:Brandkingsxx@gmail.com" style="color: var(--accent); font-weight: 700;">Email</a></li>
       </ul>
       <div class="nav-cta">
         <a href="{base_path}apply.html" class="btn-primary">Apply Now →</a>
@@ -48,6 +49,7 @@ def get_mobile_overlay_html(is_subsite=False):
         <a href="{base_path}fitflux/index.html" style="font-size: 18px; opacity: 0.8;">Fitflux</a>
     </div>
     <a href="{base_path}contact.html">Contact</a>
+    <a href="mailto:Brandkingsxx@gmail.com" style="color: var(--accent); font-weight: 700; font-size: 20px;">Email Us</a>
   </div>'''
 
 # HTML files to process

@@ -132,13 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ---- APPLY FORM ---- */
     const applyForm = document.getElementById('applyForm');
-    if (applyForm) {
-        applyForm.addEventListener('submit', e => {
-            e.preventDefault();
-            document.getElementById('applyForm').style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
-        });
-    }
+    const formSuccess = document.getElementById('formSuccess');
 
     /* ---- PHASE CARD HOVER ARROWS ---- */
     const phaseCards = document.querySelectorAll('.phase-card');
@@ -148,5 +142,57 @@ document.addEventListener('DOMContentLoaded', () => {
             if (arrow) arrow.style.color = 'var(--accent-dim)';
         }
     });
+
+    /* ---- FORM SUBMISSION (WHATSAPP & EMAIL) ---- */
+    if (applyForm) {
+        applyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(applyForm);
+            const data = Object.fromEntries(formData.entries());
+
+            // Format message for WhatsApp (with markdown)
+            let waMessage = `🚀 *New BrandKings Application*\n\n`;
+            waMessage += `👤 *Name:* ${data.first_name} ${data.last_name}\n`;
+            waMessage += `📞 *Phone:* ${data.phone}\n\n`;
+            waMessage += `🏢 *Business:* ${data.business_name}\n`;
+            waMessage += `🌍 *Industry:* ${data.industry}\n`;
+            waMessage += `💰 *Revenue:* ${data.revenue}\n`;
+            waMessage += `🎯 *Challenge:* ${data.challenge}\n\n`;
+            if (data.goals) waMessage += `📝 *Goals:* ${data.goals}\n`;
+            waMessage += `\n--- Sent from BrandKings Website ---`;
+
+            // Format message for Email (plaintext)
+            let emailBody = `New BrandKings Application\n\n`;
+            emailBody += `Name: ${data.first_name} ${data.last_name}\n`;
+            emailBody += `Phone: ${data.phone}\n\n`;
+            emailBody += `Business: ${data.business_name}\n`;
+            emailBody += `Industry: ${data.industry}\n`;
+            emailBody += `Revenue: ${data.revenue}\n`;
+            emailBody += `Challenge: ${data.challenge}\n\n`;
+            if (data.goals) emailBody += `Goals: ${data.goals}\n`;
+            emailBody += `\n--- Sent from BrandKings Website ---`;
+
+            const encodedWAMessage = encodeURIComponent(waMessage);
+            const encodedEmailBody = encodeURIComponent(emailBody);
+
+            const whatsappURL = `https://wa.me/2349078239676?text=${encodedWAMessage}`;
+            const mailtoURL = `mailto:Brandkingsxx@gmail.com?subject=New Application: ${data.business_name}&body=${encodedEmailBody}`;
+
+            // Show success UI
+            applyForm.style.display = 'none';
+            if (formSuccess) {
+                formSuccess.style.display = 'block';
+            }
+
+            // Trigger Email draft
+            window.location.href = mailtoURL;
+
+            // Redirect to WhatsApp after 2 seconds
+            setTimeout(() => {
+                window.location.href = whatsappURL;
+            }, 2000);
+        });
+    }
 
 });
