@@ -331,7 +331,9 @@ nav {
   z-index: 1000;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: clamp(60px, 10vh, 120px) 24px 40px;
+  overflow-y: auto;
   gap: 24px;
 }
 
@@ -1270,7 +1272,28 @@ footer {
   }
 
   nav .btn-primary {
-    display: none;
+    padding: 10px 16px;
+    font-size: 13px;
+    gap: 4px;
+  }
+
+  .nav-cta {
+    gap: 12px;
+  }
+
+  .nav-logo-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .nav-logo-img {
+    height: 28px;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+    gap: 6px;
   }
 
   .stats-inner {

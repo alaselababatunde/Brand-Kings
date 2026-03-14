@@ -66,9 +66,36 @@
             color: var(--text-sub);
         }
 
+        .apply-card {
+            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            text-align: left;
+        }
+
+        .apply-card-icon {
+            font-size: 40px;
+        }
+
+        .apply-card-platform {
+            text-align: left;
+        }
+
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .apply-card {
+                grid-column: span 1;
+                flex-direction: column;
+                text-align: center;
+                gap: 16px;
+            }
+
+            .apply-card-platform {
+                text-align: center;
             }
         }
     </style>
@@ -170,11 +197,10 @@
                         class="contact-value">BrandKings</a>
                     <div class="contact-sub">Follow for updates</div>
                 </div>
-                <div class="contact-card reveal d-3"
-                    style="grid-column: span 2; display: flex; align-items: center; gap: 32px; text-align: left;">
-                    <div style="font-size: 40px;">🚀</div>
+                <div class="contact-card reveal d-3 apply-card">
+                    <div class="apply-card-icon">🚀</div>
                     <div>
-                        <div class="contact-platform" style="text-align: left;">Ready To Apply?</div>
+                        <div class="contact-platform apply-card-platform">Ready To Apply?</div>
                         <p style="font-size: 16px; color: var(--text-sub); margin-bottom: 16px; line-height: 1.6;">The
                             fastest way to get started is to submit an application. We review every one and respond
                             within 24 hours.</p>
